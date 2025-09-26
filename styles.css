@@ -1,0 +1,340 @@
+/* =======================================
+   RESET BÁSICO
+   Elimina márgenes y paddings por defecto 
+   y hace que el box-sizing incluya padding 
+   dentro del ancho y alto de los elementos
+======================================= */
+* {
+    margin: 0;
+    /* elimina margen por defecto */
+    padding: 0;
+    /* elimina padding por defecto */
+    box-sizing: border-box;
+    /* incluye padding y border dentro de width/height */
+}
+
+/* =======================================
+   ESTILOS GENERALES DEL BODY
+   Fuente, color y altura de línea
+======================================= */
+body {
+    font-family: "Segoe UI", sans-serif;
+    /* fuente principal */
+    line-height: 1.5;
+    /* altura de línea para mejor lectura */
+    color: #000000;
+    /* color del texto */
+}
+
+/* =======================================
+   HEADER
+   Contenedor superior con logo
+======================================= */
+header {
+    display: flex;
+    /* organiza contenido en fila */
+    justify-content: flex-start;
+    /* alinea elementos al inicio (izquierda) */
+    align-items: center;
+    /* centra elementos verticalmente */
+    padding: 30px 15px 15px 30px;
+    /* espacio interno: top, right, bottom, left */
+    background-color: #ffffff;
+    /* color de fondo blanco */
+}
+
+/* Estilo de la imagen del logo */
+header img {
+    max-width: 300px;
+    /* ancho máximo del logo, adaptable */
+}
+
+/* =======================================
+   LOGO
+   Sombra para la imagen del logo
+======================================= */
+.logo img {
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.4));
+    /* sombra debajo del logo */
+}
+
+/* =======================================
+   SECCIÓN PRINCIPAL (HERO)
+   Contenedor con texto y imagen
+======================================= */
+#vista-principal {
+    display: flex;
+    /* coloca texto e imagen en fila */
+    justify-content: center;
+    /* centra horizontalmente los elementos */
+    align-items: center;
+    /* centra verticalmente */
+    gap: 30px;
+    /* espacio entre texto e imagen */
+    min-height: 80vh;
+    /* ocupa el 80% de la altura de la ventana */
+    background: linear-gradient(0deg, #f9f9f9 0%, #5CDAFA 100%);
+}
+
+/* Contenedor de la imagen dentro de la sección principal */
+#vista-principal .imagen {
+    max-width: 800px;
+    /* ancho máximo de la imagen */
+    width: auto;
+    /* ancho automático, mantiene proporción */
+    height: auto;
+    /* altura automática, mantiene proporción */
+}
+
+/* Contenedor de texto dentro de la sección principal */
+#vista-principal .texto {
+    max-width: 500px;
+    /* ancho máximo del texto */
+    font-family: 'Poppins', sans-serif;
+    /* fuente Poppins solo para esta sección */
+    text-align: right;
+    /* alinea el texto a la derecha */
+}
+
+/* Estilo del título principal */
+#vista-principal h1 {
+    font-size: 6rem;
+    /* tamaño grande para el hero */
+    margin-bottom: 20px;
+    /* espacio debajo del h1 */
+    font-weight: 800;
+    /* negrita */
+    text-align: left;
+    /* texto alineado a la izquierda (sobrescribe contenedor) */
+}
+
+/* Estilo del párrafo principal */
+#vista-principal p {
+    font-size: 1.5rem;
+    /* tamaño de texto grande */
+    text-align: left;
+    /* alineación a la izquierda */
+    margin-left: 30px;
+}
+
+
+/* =======================================
+   SECCIÓN GRATIS 
+   Contenedor con imagen
+======================================= */
+#section-gratis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    /* Degradado suave moderno */
+    background: linear-gradient(to right, #ffffff 0%, #5CDAFA 50%, #ffffff 100%);
+    /* Margen externo */
+    margin: 50px;
+    /* Aplica 20px en los 4 lados */
+}
+
+#section-gratis .imagen img {
+    max-width: 100%;
+    /* Que no se salga de la sección */
+    height: auto;
+}
+
+/* =======================================
+   SECCIÓN OFRECEMOS 
+   Contenedor con LISTA
+======================================= */
+#ofrecemos {
+    background: linear-gradient(to right, #5cdafa, #ffffff);
+}
+
+#ofrecemos .lista-imagen {
+    display: flex;
+    /* Activa Flexbox */
+    justify-content: center;
+    /* Centra horizontalmente la sección */
+    align-items: center;
+    /* Centra verticalmente (alineación) */
+    gap: 40px;
+    /* Espacio entre lista e imagen */
+    padding: 40px 20px;
+    /* Espacio interno de la sección */
+    flex-wrap: wrap;
+    /* Permite que se ajusten en pantallas pequeñas */
+    text-align: left;
+    /* Texto de la lista alineado a la izquierda */
+}
+
+.lista-bloques li {
+    list-style: none;
+    /* Quita los puntos */
+    background: linear-gradient(90deg, #0000003b, #f8f8f800);
+    /* degradado horizontal */
+    font-size: 30px;
+    /* Texto más grande */
+    padding: 50px 60px;
+    /* Bloques más altos y anchos */
+    margin-bottom: 10px;
+    /* separación entre bloques */
+    font-weight: 700;
+    /* texto en negrita */
+    font-family: 'Poppins', sans-serif;
+    /* fuente */
+
+    border-radius: 5px;
+    /* bordes redondeados */
+}
+
+
+#ofrecemos h2 {
+    font-size: 50px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+#ofrecemos .lista {
+    max-width: 400px;
+    /* Limita ancho de la lista */
+}
+
+#ofrecemos .imagen img {
+    max-width: 100%;
+    /* Limita ancho de la imagen */
+    height: auto;
+}
+
+/* =======================================
+   UBIACION
+   contienen texto y mapa
+======================================= */
+
+/* Contenedor de texto y mapa */
+#ubicacion h2 {
+    font-size: 50px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.texto-mapa {
+    display: flex;
+    /* Los pone uno al lado del otro */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 20px;
+    /* Espacio entre texto y mapa */
+    flex-wrap: wrap;
+    /* Para que se acomoden si la pantalla es pequeña */
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Ajustes opcionales */
+.texto {
+    max-width: 300px;
+    /* Limita ancho del texto */
+}
+
+.mapa iframe {
+    width: 600px;
+    height: 450px;
+    /* Hace el mapa responsivo */
+    border-radius: 10px;
+    /* Bordes redondeados opcionales */
+}
+
+/* =======================================
+   SECCION TELEFONOS
+  texto lista
+======================================= */
+/* Contenedor principal */
+#section-telefonos {
+    background: linear-gradient(to right, #5cdafa, #ffffff);
+    font-size: 3rem;
+}
+
+.texto-lista {
+    display: flex;
+    /* Los acomoda en fila */
+    justify-content: space-around;
+    /* Centra horizontalmente en la página */
+    align-items: center;
+    /* Centra verticalmente entre ellos */
+    gap: 30px;
+    /* Espacio entre "texto" y "lista" */
+    flex-wrap: wrap;
+    /* Si la pantalla es pequeña, se acomodan en columna */
+    margin-top: 70px;
+    text-align: center;
+
+}
+
+/* Opcional: ajustamos estilos */
+.lista-telefonos {
+    list-style: none;
+    /* Quita viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* =======================================
+   FOOTER
+   Pie de página con texto centrado o a la izquierda
+======================================= */
+
+/* Contenedor del footer */
+.texto-iconos {
+    display: flex;
+    /* Pone texto e iconos en fila */
+    justify-content: space-between;
+    /* Texto a la izquierda, iconos a la derecha */
+    align-items: center;
+    /* Centra verticalmente */
+    padding: 0 20px;
+    /* Margen interno a los lados */
+    background-color: #f2f2f2;
+    /* Color de fondo opcional */
+    height: 60px;
+    /* Altura del footer */
+}
+
+/* Ajuste del texto */
+.texto p {
+    margin: 0;
+    /* Quita margen por defecto */
+    font-size: 1rem;
+}
+
+/* Lista de iconos */
+.lista-redes {
+    list-style: none;
+    /* Quita viñetas */
+    display: flex;
+    /* Pone los iconos en fila */
+    gap: 15px;
+    /* Espacio entre iconos */
+    margin: 0;
+    /* Quita margen por defecto */
+    padding: 0;
+    /* Quita padding por defecto */
+}
+
+/* Estilo de los iconos */
+.lista-redes li i {
+    font-size: 1.5rem;
+    /* Tamaño del icono */
+    color: #000;
+    /* Color del icono */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre ellos */
+    transition: color 0.3s;
+}
+
+.lista-redes li i:hover {
+    color: #5cdafa;
+    /* Color al pasar el mouse */
+}
